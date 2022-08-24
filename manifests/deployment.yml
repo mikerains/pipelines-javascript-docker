@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mikerainspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mikerainspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: mikerainspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mikerainspipelinesjavascriptdocker 
+          image: acrmikerainsvalorem.azurecr.io/mikerainspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
